@@ -15,7 +15,7 @@ PERCENTAGE_RATE = 100
 
 
 # The start of our loop over our districts.
-for districts in range (2):
+for district in range (1, 3):
 
     # Shelter data intiated variables.
     total_capacity = 0
@@ -51,7 +51,7 @@ for districts in range (2):
         occupancy_rate += calc_occupancy_rate
     
     # Summary for the district.
-    print("*** District Summary ***")
+    print(f"*** District {district} Summary ***")
     print("-------------------")
     print("Average occupancy rate: %", (occupancy_rate / 3))
     print("Total Capacity: ", total_capacity)
