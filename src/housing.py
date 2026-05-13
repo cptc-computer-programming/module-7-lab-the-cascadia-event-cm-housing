@@ -27,20 +27,30 @@ for districts in range (2):
 
     # The start of our loop for our shelters.
     for shelters in range(3):
+
+        # Total Capacity.
         user_total_capacity = int(input("Enter Total Capacity: "))
-            while user_total_capacity > 0
+        while user_total_capacity < MIN_CAPACITY:
+            user_total_capacity = int(input("Invalid Entry. Please Enter Valid Total Capacity: "))
         total_capacity += user_total_capacity
         
+        #People Sheltered.
         user_people_sheltered = int(input("Enter people sheltered: "))
+        while user_people_sheltered < MIN_PEOPLE_SHELTERED and user_people_sheltered <= user_total_capacity:
+            user_people_sheltered =int(input("Invalid Entry. Please Enter Valid People Sheltered: "))
         people_sheltered += user_people_sheltered
 
-        user_new_evacuees_expected = int(input("Enter new evacuees expected: "))
+        # New Expected Evacuees.
+        user_new_evacuees_expected = int(input("Enter New Evacuees Expected: "))
+        while user_new_evacuees_expected >= MIN_NEW_EVACUEES:
+            user_new_evacuees_expected = int(input("Invalid Entry. Please Enter Valid New Evacuees Expected: "))
         new_evacuees_expected += user_new_evacuees_expected
 
-
+        # Occupancy rates for each shelter and district.
         calc_occupancy_rate = people_sheltered / total_capacity * PERCENTAGE_RATE
         occupancy_rate += calc_occupancy_rate
     
+    # Summary for the district.
     print("*** District Summary ***")
     print("-------------------")
     print("Average occupancy rate: %", (occupancy_rate / 3))
@@ -49,18 +59,6 @@ for districts in range (2):
     print("Total new evacuees expected: ", new_evacuees_expected)
     print("Projected occupancy rate: %",(people_sheltered + new_evacuees_expected) / total_capacity * PERCENTAGE_RATE)
 
-
+# Ending message for program.
 print("Data collection complete for all districts.")
 print("```")
-
-
-
-# TODO: Process shelter occupancy data for both districts.
-
-# TODO: For each district, process all shelters.
-
-# TODO: Validate all user input.
-
-# TODO: Calculate and display shelter-level and district-level results.
-
-# TODO: Print a final completion message.
