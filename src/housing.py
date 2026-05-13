@@ -9,32 +9,28 @@ MIN_PEOPLE_SHELTERED = 1
 MIN_NEW_EVACUEES = 0
 
 
-# Cloverpark intiated variables.
-clover_total_capacity = 0
-clover_people_sheltered = 0
-clover_new_evacuees_expected = 0
-clover_occupancy_rate = 0
+# Shelter data intiated variables.
+total_capacity = 0
+people_sheltered = 0
+new_evacuees_expected = 0
+occupancy_rate = 0
 
-# Steilacoom intiated variables.
-steilacoom_total_capacity = 0
-steilacoom_people_sheltered = 0
-steilacoom_new_evacuees_expected = 0
-steilacoom_occupancy_rate = 0
+
 
 # The start of our loop over our districts.
 for districts in range (2):
     # The start of our loop for our shelters.
     for shelters in range(3):
-        user_clover_total_capacity = input("Enter Total Capacity: ")
-        clover_total_capacity += user_clover_total_capacity
+        user_total_capacity = input("Enter Total Capacity: ")
+        total_capacity += user_clover_total_capacity
 
-        user_clover_people_sheltered = input("Enter people sheltered: ")
-        clover_people_sheltered += user_clover_people_sheltered
+        user_people_sheltered = input("Enter people sheltered: ")
+        people_sheltered += user_clover_people_sheltered
 
-        user_clover_new_evacuees_expected = input("Enter new evacuees expected: ")
-        clover_new_evacuees_expected += user_clover_new_evacuees_expected
+        user_new_evacuees_expected = input("Enter new evacuees expected: ")
+        new_evacuees_expected += user_clover_new_evacuees_expected
 
-        clover_occupancy_rate = 
+        occupancy_rate = 
 
 # TODO: Process shelter occupancy data for both districts.
 
