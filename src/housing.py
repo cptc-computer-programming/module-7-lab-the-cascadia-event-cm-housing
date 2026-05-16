@@ -24,7 +24,7 @@ for district in range (1, 3):
     occupancy_rate = 0
     average_occupancy_rate_for_district = 0
     calc_occupancy_rate = 0
-
+# yo
     # The start of our loop for our shelters.
     for shelters in range(3):
 
